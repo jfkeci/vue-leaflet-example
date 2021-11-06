@@ -1,31 +1,14 @@
 <template>
   <div id="app">
-    <b-button class="m-1" @click="show = 1">Show 1</b-button>
-    <b-button class="m-1" @click="show = 2">Show 2</b-button>
-    <b-button class="m-1" @click="show = 3">Show 3</b-button>
-    <br />
-    <div class="m-3">
-      <Example1 v-if="show == 1" />
-      <Example2 v-if="show == 2" />
-      <Example3 v-if="show == 3" />
+    <div id="nav">
+      <router-link to="/">Example1</router-link> |
+      <router-link to="/example2">example2</router-link> |
+      <router-link to="/example3">example3</router-link> |
+      <router-link to="/example4">example4</router-link>
     </div>
+    <router-view />
   </div>
 </template>
-
-<script>
-import Example1 from "./components/Example1.vue";
-import Example2 from "./components/Example2.vue";
-import Example3 from "./components/Example3.vue";
-export default {
-  name: "App",
-  components: { Example1, Example2, Example3 },
-  data() {
-    return {
-      show: 3,
-    };
-  },
-};
-</script>
 
 <style>
 #app {
@@ -34,6 +17,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
