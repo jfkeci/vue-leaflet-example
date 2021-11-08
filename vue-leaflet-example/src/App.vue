@@ -4,7 +4,6 @@
       <router-link to="/">Example1</router-link> |
       <router-link to="/example2">example2</router-link> |
       <router-link to="/example3">example3</router-link> |
-      <router-link to="/example4">example4</router-link>
     </div>
     <router-view />
   </div>

@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import Example1 from '../components/Example1.vue'
 import Example2 from '../components/Example2.vue'
 import Example3 from '../components/Example3.vue'
-import Example4 from '../components/Example4.vue'
 
 Vue.use(VueRouter)
 
@@ -22,11 +21,6 @@ const routes = [
     path: '/example3',
     name: 'Example3',
     component: Example3
-  },
-  {
-    path: '/example4',
-    name: 'Example4',
-    component: Example4
   }
 ]
 
